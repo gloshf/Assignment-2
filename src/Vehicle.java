@@ -1,8 +1,8 @@
 import java.time.Year;
 
-public class Vehicle {
+public abstract class Vehicle {
     protected int id;
-    protected static int idGen;
+    protected static int idGen = 1;
     protected String model;
     protected int year;
     protected double basePrice;
@@ -56,10 +56,10 @@ public class Vehicle {
         return currentYear - year;
     }
 
-
+    public abstract double calculateInsuranceFee();
 
     @Override
     public String toString() {
-        return "Vehicle ID: " + id + "\n" +  "Model: " + model + "\n" + "Year: " + year + "\n" + "Base Price: " + basePrice;
+        return "Vehicle ID: " + id + "\n" +  "Model: " + model + "\n" + "Year: " + year + "\n" + "Base Price: " + "€" + basePrice;
     }
 }

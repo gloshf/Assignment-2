@@ -1,4 +1,4 @@
-/*public class Car extends Vehicle {
+public class Car extends Vehicle {
     private int numberOfDoors;
 
     public Car(String model, int year, double basePrice, int numberOfDoors) {
@@ -6,7 +6,7 @@
         setNumberOfDoors(numberOfDoors);
     }
 
-    public void getNumberOfDoors(int numberOfDoors) {
+    public int getNumberOfDoors() {
         return numberOfDoors;
     }
 
@@ -22,9 +22,6 @@
 
     @Override
     public String toString() {
-        return super.toString() +
-                "numberOfDoors=" + numberOfDoors;
+        return super.toString() + "\nNumber Of Doors: " + numberOfDoors;
     }
 }
-
- */
