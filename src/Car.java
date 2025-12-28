@@ -24,4 +24,17 @@ public class Car extends Vehicle {
     public String toString() {
         return super.toString() + "\nNumber Of Doors: " + numberOfDoors;
     }
+
+    @Override
+    public void performService(){
+        System.out.println("Car services: oil, filters, and inspections");
+    }
+
+    @Override
+    public int getServiceIntervalKm() {
+        return 10000;
+    }
+
+
+
 }

@@ -24,4 +24,14 @@ public class Bus extends Vehicle {
     public String toString() {
         return super.toString() + "\nPassenger Capacity: " + passengerCapacity;
     }
+
+    @Override
+    public void performService() {
+        System.out.println("Bus service: fluid checks(oil & filter), tire maintenance, and detailed inspections ");
+    }
+
+    @Override
+    public int getServiceIntervalKm() {
+        return 10000;
+    }
 }

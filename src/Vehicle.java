@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.time.Year;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Servicable {
     protected int id;
     protected static int idGen = 1;
     protected String model;
@@ -62,4 +63,6 @@ public abstract class Vehicle {
     public String toString() {
         return "Vehicle ID: " + id + "\n" +  "Model: " + model + "\n" + "Year: " + year + "\n" + "Base Price: " + "€" + basePrice;
     }
+
+
 }
