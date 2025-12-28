@@ -2,11 +2,11 @@ import java.io.Serializable;
 import java.time.Year;
 
 public abstract class Vehicle implements Servicable {
-    protected int id;
-    protected static int idGen = 1;
-    protected String model;
-    protected int year;
-    protected double basePrice;
+    private int id;
+    private static int idGen = 1;
+    private String model;
+    private int year;
+    private double basePrice;
 
     public Vehicle(String model, int year, double basePrice) {
         this.id = idGen++;
@@ -51,6 +51,7 @@ public abstract class Vehicle implements Servicable {
         if(basePrice < 0)
             throw new IllegalArgumentException("Base price cannot be negative");
     }
+
 
 
     public int getAge(int currentYear){

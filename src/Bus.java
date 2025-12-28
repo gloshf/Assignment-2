@@ -16,8 +16,10 @@ public class Bus extends Vehicle {
 
     @Override
     public double calculateInsuranceFee(){
-        int age = java.time.Year.now().getValue();
-        return basePrice * 0.08 + passengerCapacity * 50 + age * 150;
+        int currentYear = java.time.Year.now().getValue();
+        int age = currentYear - getYear();
+        double price = getBasePrice();
+        return price * 0.08 + passengerCapacity * 50 + age * 150;
     }
 
     @Override

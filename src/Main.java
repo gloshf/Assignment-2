@@ -25,7 +25,10 @@ public class Main {
         System.out.println("Car insurance: " + ((Car)car1).calculateInsuranceFee());
         System.out.println("Bus insurance: " + ((Bus)bus1).calculateInsuranceFee());
 
-
+        FleetApp app = new FleetApp();
+        app.addVehicle(car1);
+        app.addVehicle(bus1);
+        app.run();
 
 
     }
